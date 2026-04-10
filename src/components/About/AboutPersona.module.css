@@ -100,7 +100,44 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    gap: 1.5rem;
+  }
+
+  .heading {
+    margin-top: 0.5rem;
+  }
+
+  .cardRow {
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .cardWrapper {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 140px;
+    transition: none;
+  }
+
   .cardRow .cardWrapper:hover {
-    flex: 2.5;
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .cardImage {
+    height: 120px;
+  }
+
+  .cardTitle {
+    font-size: 0.55rem;
+    white-space: normal;
+  }
+
+  .cardDesc {
+    font-size: 0.7rem;
+  }
+
+  .cardBar {
+    height: 10px;
   }
 }
