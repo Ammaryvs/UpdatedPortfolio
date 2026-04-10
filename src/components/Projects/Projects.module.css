@@ -191,9 +191,11 @@
     position: absolute;
     bottom: 1rem;
     left: 1.5rem;
-    right: 1.5rem;
+    max-width: calc(100vw - 3rem);
     width: auto;
-    overflow-x: auto;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
     border-radius: 14px;
     padding: 0.4rem;
     gap: 0.35rem;
