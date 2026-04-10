@@ -1,0 +1,101 @@
+.section {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.heading {
+  font-size: var(--fs-h1);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.diamond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+/* One slot per K image */
+.letterGroup {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* | separator between each K — same size and colour as the labels */
+.separator {
+  flex-shrink: 0;
+  font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+  font-weight: 700;
+  color: var(--color-text);
+  align-self: center;
+  user-select: none;
+}
+
+/* Positioning context: K behind, label in front */
+.letterWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* K.png — the background graphic */
+.letterK {
+  height: clamp(8rem, 22vw, 20rem);
+  width: auto;
+  display: block;
+  user-select: none;
+}
+
+/* Label centred over its own K with translucent black backing */
+.phaseLabel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0.45rem 0.5rem;
+  text-align: center;
+  font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tagline {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .letterK {
+    height: clamp(4rem, 20vw, 8rem);
+  }
+
+  .phaseLabel {
+    font-size: 0.45rem;
+    padding: 0.3rem 0.25rem;
+  }
+
+  .separator {
+    font-size: 0.45rem;
+  }
+
+  .tagline {
+    font-size: 0.7rem;
+  }
+}

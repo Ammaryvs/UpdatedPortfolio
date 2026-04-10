@@ -1,0 +1,116 @@
+.hero {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 5rem;
+}
+
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-rain);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.content {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name {
+  font-family: var(--font-pixel);
+  font-size: var(--fs-hero);
+  color: var(--color-accent);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.typingLine {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  flex-wrap: wrap;
+}
+
+.typingWord {
+  color: var(--color-accent);
+  font-weight: 600;
+  min-width: 1ch;
+}
+
+.cursor {
+  color: var(--color-accent);
+  animation: blink 0.7s step-end infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.iconBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  font-size: 1.25rem;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  background: rgba(255,255,255,0.03);
+}
+
+.iconBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(255, 69, 0, 0.08);
+}
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 2rem;
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background var(--transition), color var(--transition);
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.resumeBtn:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 4rem;
+  }
+
+  .socials {
+    gap: 0.75rem;
+  }
+}
